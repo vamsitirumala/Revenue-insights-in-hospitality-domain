@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Insights in Hospitality - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Revenue Insights in Hospitality</h1>
+        <p>Analyzing Revenue Trends Using Power BI, Power Query, and DAX</p>
+    </header>
+
+    <section id="abstract">
+        <h2>Abstract</h2>
+        <p>
+            This project focuses on analyzing revenue trends in the hospitality industry, including hotels, restaurants, and events. The goal is to identify key performance indicators (KPIs) such as RevPAR (Revenue Per Available Room), 
+            Occupancy Rate, ADR (Average Daily Rate), and Realization Percentage. Using Power BI, Power Query, and DAX queries, the project provides actionable insights to improve financial performance and optimize revenue generation.
+        </p>
+    </section>
+
+    <section id="data-analysis">
+        <h2>Data Analysis Process</h2>
+        <div class="process-step">
+            <h3>Data Collection</h3>
+            <p>
+                Data was collected from various sources, including booking systems, customer demographics, and revenue reports. The dataset included information on room bookings, cancellations, no-shows, and customer ratings.
+            </p>
+        </div>
+        <div class="process-step">
+            <h3>Data Transformation</h3>
+            <p>
+                Using Power Query, the data was cleaned and transformed. This included handling missing values, removing duplicates, and creating new columns for analysis, such as week numbers and day types (weekday/weekend).
+            </p>
+        </div>
+        <div class="process-step">
+            <h3>Data Modeling</h3>
+            <p>
+                In Power BI, relationships between tables were established using common columns. DAX queries were used to create calculated columns and measures, such as RevPAR, Occupancy %, and ADR.
+            </p>
+        </div>
+        <div class="process-step">
+            <h3>Visualization</h3>
+            <p>
+                Interactive dashboards were created in Power BI to visualize revenue trends, booking patterns, and customer demographics. Key metrics like Realization %, Cancellation %, and No-Show Rate were highlighted.
+            </p>
+        </div>
+    </section>
+
+    <section id="tools-used">
+        <h2>Tools Used</h2>
+        <div class="tool-logos">
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI Logo">
+                <p>Power BI</p>
+            </div>
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019–present%29.svg" alt="Excel Logo">
+                <p>Excel</p>
+            </div>
+            <div class="tool">
+                <img src="https://raw.githubusercontent.com/balu-434/logos/refs/heads/main/power%20query%20editor%20logo.svg" alt="Power Query Logo">
+                <p>Power Query</p>
+            </div>
+            <div class="tool">
+                <img src="https://raw.githubusercontent.com/balu-434/logos/refs/heads/main/trace.svg" alt="DAX Logo">
+                <p>DAX</p>
+            </div>
+        </div>
+    </section>
+<section>
+    <h2>DAX Queries and Measures</h2>
+    <p>Below are the essential DAX queries used to calculate key metrics for this project:</p>
+    <table class="dax-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>DAX Expression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Revenue</td>
+          <td>SUM(fact_bookings[revenue_realized])</td>
+        </tr>
+        <tr>
+          <td>Occupancy %</td>
+          <td>DIVIDE([Total Successful Bookings],[Total Capacity],0)</td>
+        </tr>
+        <tr>
+          <td>ADR</td>
+          <td>DIVIDE([Revenue], [Total Bookings],0)</td>
+        </tr>
+        <tr>
+          <td>RevPAR</td>
+          <td>DIVIDE([Revenue],[Total Capacity])</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            The project successfully identified key revenue trends and provided actionable insights for the hospitality industry. By analyzing metrics like RevPAR, Occupancy %, and ADR, the project highlighted areas for improvement 
+            and optimization. The interactive Power BI dashboards enabled stakeholders to make data-driven decisions to enhance revenue generation.
+        </p>
+    </section>
+
+    <section id="learnings">
+        <h2>What I Gained</h2>
+        <ul>
+            <li>Hands-on experience with Power BI, Power Query, and DAX for data analysis and visualization.</li>
+            <li>Improved skills in data transformation, modeling, and creating interactive dashboards.</li>
+            <li>Understanding of key hospitality metrics like RevPAR, ADR, and Occupancy %.</li>
+            <li>Ability to derive actionable insights from complex datasets.</li>
+        </ul>
+    </section>
+
+    <section id="struggles">
+        <h2>Struggles & Challenges</h2>
+        <ul>
+            <li>Handling large datasets with missing values and inconsistencies was challenging.</li>
+            <li>Creating complex DAX measures for metrics like Realization % required extensive testing.</li>
+            <li>Ensuring accurate relationships between tables in Power BI was time-consuming.</li>
+        </ul>
+    </section>
+
+    <section id="project-file">
+        <h2>Power BI Dashboard</h2>
+        <p>You can view the interactive Power BI dashboard for this project by clicking the button below:</p>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYmM5MjEwYjYtODE3Ni00NTY3LWE3YzMtZTBjMGU0OTA5OGVkIiwidCI6IjJiZTI0MTFiLWIxNmUtNGFhYy1iZDg2LTk2MGUyMWQ3YTljMSJ9" class="project-button" target="_blank">View Power BI Dashboard</a>
+    </section>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
